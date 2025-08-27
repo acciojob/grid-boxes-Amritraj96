@@ -1,10 +1,36 @@
-/*  your css code here. If applicable */
-.box{
-/*background-color: green;*/
+/* common styling */
+.box {
+  background-color: green;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#grid{
-display: grid;
-background-color: green;
-color:white;
-grid-template-columns: 100px 100px 100px 100px;
+
+/* grid container */
+#grid {
+  display: grid;
+  background-color: green;
+  color: white;
+  grid-template-rows: repeat(5, 124px);
+  grid-template-columns: repeat(4, 242.5px);
+  grid-gap: 10px 10px;
+}
+
+/* special spans */
+#grid > div:nth-child(1) {
+  grid-column: span 4;
+}
+#grid > div:nth-child(2) {
+  grid-row: span 4;
+}
+#grid > div:nth-child(4) {
+  grid-column: span 2;
+}
+#grid > div:nth-child(5) {
+  grid-column: span 2;
+}
+#grid > div:nth-child(10) {
+  grid-column: span 3;
 }
